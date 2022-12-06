@@ -40,5 +40,10 @@ char* _mallocAndReadFile(const char* filePath, const char* sourceFile, int line)
 }
 #endif // extern "C"
 
+// Get rid of ALE linter error
+#if defined(__GNUC__) && !defined(alloca)
+	#define alloca(size)   __builtin_alloca (size)
+#endif
+
 #endif // FILE2STRING_H
 
