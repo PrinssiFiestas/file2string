@@ -1,6 +1,6 @@
 # File2String
 
-A minimalist library to read a file and store it to a string. Why? Because such a trivial task should only require a single line of code. 
+A minimalist C library to read a file and store it to a string. Why? Because such a trivial task should only require a single line of code. 
 
 ## Example Program
 
