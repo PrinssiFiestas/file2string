@@ -39,7 +39,7 @@ long _sizeOfFile(const char* filePath, const char* sourceFile, int line)
 	long fileSize = ftell(file);
 	fclose(file);
 	
-	return fileSize;
+	return fileSize + 1/*null termination*/;
 }
 
 char* _readFileToStr(const char* filePath, char* outputStr, const char* sourceFile, int line)

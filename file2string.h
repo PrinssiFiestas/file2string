@@ -10,7 +10,7 @@
 // ------------------------------------
 
 #define readFile(FILE_PATH)	\
-	readFileToStr(FILE_PATH, (char*)alloca(sizeOfFile(FILE_PATH) + 1/*null termination*/))
+	readFileToStr(FILE_PATH, (char*)alloca(sizeOfFile(FILE_PATH)))
 
 #define sizeOfFile(FILE_PATH)	\
 	_sizeOfFile(FILE_PATH, __FILE__, __LINE__)
