@@ -13,7 +13,7 @@ static FILE* fopenWithErrorHandling(const char* filePath, const char* sourceFile
 	// At the time of writing MSVC requires fopen_s for whatever reason
 #if defined(_MSC_VER) && (_MSC_VER >= 1400 ) && (!defined WINCE)
 	int err = fopen_s(&file, filePath, "r");
-	if(err == 0)
+	if(err)
 #else
 	file = fopen(filePath, "r");
 	if(file == NULL)
